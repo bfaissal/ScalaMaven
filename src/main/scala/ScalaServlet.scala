@@ -13,7 +13,7 @@ import javax.servlet.http.{HttpServletResponse, HttpServletRequest, HttpServlet}
 @WebServlet(name = "ScalaServlet",urlPatterns = Array("/scala"))
 class ScalaServlet extends HttpServlet{
   @Inject
-  var aService: ScalaService= new ScalaService();
+  var aService: ScalaService= _
 
   override def doGet(req: HttpServletRequest, resp: HttpServletResponse) {
     resp.getWriter.println("Salam + "+aService.saySalam("Faissal"))
